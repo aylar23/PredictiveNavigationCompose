@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.aylar.predictivenavigationcompose"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.aylar.predictivenavigationcompose"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
