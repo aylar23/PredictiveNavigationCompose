@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">PredictiveNavigationCompose</string>
+    <string name="tap_to_expand">Tap to expand</string>
+    <string name="long_text">"On a warm summer afternoon, the sun casts a golden glow over the vibrant park filled with laughter and joy. Children splash in the cool waters of a nearby fountain while families gather for picnics, their blankets spread across the lush green grass. Nearby, the sweet fragrance of blooming flowers mingles with the sound of birds singing, creating a symphony of nature.
+        \nPeople stroll leisurely along shaded paths, sipping cold drinks and enjoying ice cream cones that melt in the heat. The air is filled with a sense of freedom and relaxation as friends share stories and couples take romantic walks. As the day begins to fade, the sky transforms into a canvas of warm hues, signaling the perfect end to a beautiful summer day.</string>
 </resources>

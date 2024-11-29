@@ -11,7 +11,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.aylar.predictivenavigationcompose.screens.SheetScreen
+import com.aylar.predictivenavigationcompose.screens.TextScreen
 import com.aylar.predictivenavigationcompose.ui.theme.PredictiveNavigationComposeTheme
+import kotlinx.serialization.Serializable
+
+@Serializable
+data object ScreenA
+
+@Serializable
+data object ScreenB
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +33,24 @@ class MainActivity : ComponentActivity() {
         setContent {
             PredictiveNavigationComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        modifier = Modifier.padding(innerPadding),
+                        startDestination = ScreenA
+                    ) {
+                        composable<ScreenA> {
+                            TextScreen(
+                                onButtonClick = {
+                                    navController.navigate(ScreenB)
+                                }
+                            )
+                        }
+                        composable<ScreenB> {
+                            SheetScreen()
+                        }
+                    }
+
                 }
             }
         }
